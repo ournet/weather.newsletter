@@ -1,0 +1,11 @@
+{
+  "email_title_weekend": {
+    "ro": "%s: Vremea în weekend"
+  },
+  "email_title_weekstart": {
+    "ro": "%s: Vremea pentru început de săptămână"
+  },
+  "email_title": {
+    "ro": "%s: Vremea pentru 3 zile"
+  }
+}

@@ -6,6 +6,18 @@
     "ro": "%s: Vremea pentru început de săptămână"
   },
   "email_title": {
-    "ro": "%s: Vremea pentru 3 zile"
+    "ro": "%s: Vremea pentru urătoarele zile"
+  },
+  "place_weather_title": {
+    "ro": "Vremea în %s"
+  },
+  "unsubscribe_here": {
+    "ro": "Pentru a nu mai primi acest email, vă puteți <a href=\"%s\">dezabona</a>."
+  },
+  "email_sent_to": {
+    "ro": "Acest email a fost trimis pentru %s"
+  },
+  "weather_for_10_days": {
+    "ro": "Vremea pentru 10 zile"
   }
 }

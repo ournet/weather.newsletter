@@ -1,3 +1,65 @@
 
-div
-  h3= title
+- var projectName = links.projectName(currentCulture.country)
+- var host=countryLinks.weather.host;
+
+div(style='background:#f2f0ea;font-family:open sans,helvetica neue,helvetica,arial,sans-serif;font-size:14px;color:#333;line-height:1.42857143;')
+  div(style='margin:0px auto;max-width:600px;')
+    div(style='padding:30px 40px;')
+      a(title=projectName, href='http://'+host + countryLinks.weather.home({ul:currentCulture.lang, utm_source:'newsletter', utm_medium:'email', utm_campaign:'email_weather', utm_content:'logo'}))
+        img(src=links.cdn.assets.img.logo(currentCulture.country), alt=projectName)
+    //- content
+    div(style='background:#f2f0ea;padding:20px 40px;padding-top:0px;')
+      //- message
+      div(style='padding:5px 0px;')
+        if (currentCulture.lang === 'ro')
+          p Buna ziua,
+          p Vă trimitem prognoza meteo pentru următoarele zile.
+        p(style='font-size:140%')
+          a(style='color:#333;text-decoration:none;',href='http://'+host+countryLinks.weather.place(place.id, {ul:currentCulture.lang, utm_source:'newsletter', utm_medium:'email', utm_campaign:'email_weather', utm_content:'title'}))= placeWeatherTitle
+            |  ›
+      //- report
+      div()
+        each day, i in forecast.days
+          if (i<3)
+            - var dayDate = util.moment.tz(day.times[day.times.length-1].time, place.timezone).locale(currentCulture.lang);
+            - var todayHolidays = holidays.filter(function(holiday){ return moment(holiday.date).tz(place.timezone).format('DD-MM-YYYY')===dayDate.format('DD-MM-YYYY');});
+            //- day header
+            div(style='padding:6px 12px;background:#2199e8;color:#fff;font-size:120%;')= dayDate.format('dddd')
+              | , 
+              = dayDate.format('D MMMM')
+            //- weather table
+            table(style='width:100%;border-spacing:0;border-collapse:collapse;background:#fff;')
+              each item in day.times
+                - var symbol_name = util.symbolName(item.symbol)
+                - var date = util.moment.tz(item.time, place.timezone).locale(currentCulture.lang);
+                tr
+                  //- time
+                  td(style='padding:6px 12px;font-size:120%;width:80px;border-bottom:1px solid #e8e5da;')= date.format('HH:00')
+                  //- temperature
+                  td(style='padding:6px 12px;padding-rigth:20px;width:70px;text-align:right;border-bottom:1px solid #e8e5da;font-size:150%;')
+                    span(style='color:#2199e8;')= item.t.value
+                    span(style='color:#e8e5da')
+                      |  &deg;C
+                  //- symbol name
+                  td(style='padding:6px 12px;border-bottom:1px solid #e8e5da;')= symbol_name
+                  //- .wt-col.wt-wind
+                  //-   //- i.wi.wi-wind(class='wi-towards-' + item.wind.dir.code.toLowerCase())
+                  //-   span.wind-speed(class='beaufort-'+item.wind.speed.beaufort)= item.wind.speed.mps
+                  //-   = S('item_wind_speed_ms')
+            div(style='padding:3px;border-top:2px solid #e8e5da;')
+            |  
+            if (todayHolidays && todayHolidays.length>0)
+              div(style='font-size:90%;')
+                each item in todayHolidays
+                  div= item.name
+              div(style='padding:3px;border-top:2px solid #e8e5da;')
+              |  
+      br
+      a(style='color:#cb6048;',href='http://'+host+countryLinks.weather.place(place.id, {ul:currentCulture.lang, utm_source:'newsletter', utm_medium:'email', utm_campaign:'email_weather', utm_content:'10days'}))= S('weather_for_10_days', currentCulture.lang)
+        |  ›
+      br
+      br
+  //- footer
+  div(style='background:#e8e5da; font-size:90%;color:#777;text-align:center;padding:20px;')
+    div= util.format(S('email_sent_to', currentCulture.lang), subscriber.email)
+    div!= util.format(S('unsubscribe_here', currentCulture.lang),'http://'+host+ countryLinks.weather.newsletter.unsubscribe(subscriber.id))

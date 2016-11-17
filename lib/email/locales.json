@@ -1,23 +1,30 @@
 {
   "email_title_weekend": {
-    "ro": "%s: Vremea în weekend"
+    "ro": "%s: Vremea în weekend",
+    "ru": "%s: Прогноз погоды на выходные дни"
   },
   "email_title_weekstart": {
-    "ro": "%s: Vremea pentru început de săptămână"
+    "ro": "%s: Vremea pentru început de săptămână",
+    "ru": "%s: Погода в начале недели"
   },
   "email_title": {
-    "ro": "%s: Vremea pentru urătoarele zile"
+    "ro": "%s: Vremea pentru următoarele zile",
+    "ru": "%s: Прогноз погоды на ближайшие дни"
   },
   "place_weather_title": {
-    "ro": "Vremea în %s"
+    "ro": "Vremea în %s",
+    "ru": "%s: Погода"
   },
   "unsubscribe_here": {
-    "ro": "Pentru a nu mai primi acest email, vă puteți <a href=\"%s\">dezabona</a>."
+    "ro": "Pentru a nu mai primi acest email, vă puteți <a href=\"%s\">dezabona</a>.",
+    "ru": "Чтобы прекратить получать этот бюллетень, пожалуйста, <a href=\"%s\">отказаться от подписки</a>."
   },
   "email_sent_to": {
-    "ro": "Acest email a fost trimis pentru %s"
+    "ro": "Acest email a fost trimis pentru %s",
+    "ru": "Это сообщение было отправлено на %s"
   },
   "weather_for_10_days": {
-    "ro": "Vremea pentru 10 zile"
+    "ro": "Vremea pentru 10 zile",
+    "ru": "Прогноз погоды на 10 дней"
   }
 }

@@ -14,6 +14,9 @@ div(style='background:#f2f0ea;font-family:open sans,helvetica neue,helvetica,ari
         if (currentCulture.lang === 'ro')
           p Buna ziua,
           p Vă trimitem prognoza meteo pentru următoarele zile.
+        else if (currentCulture.lang === 'ru')
+          p Здравствуйте,
+          p Прогноз погоды на ближайшие дни.
         p(style='font-size:140%')
           a(style='color:#333;text-decoration:none;',href='http://'+host+countryLinks.weather.place(place.id, {ul:currentCulture.lang, utm_source:'newsletter', utm_medium:'email', utm_campaign:'email_weather', utm_content:'title'}))= placeWeatherTitle
             |  ›

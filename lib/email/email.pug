@@ -25,7 +25,7 @@ div(style='background:#f2f0ea;font-family:open sans,helvetica neue,helvetica,ari
         each day, i in forecast.days
           if (i<3)
             - var dayDate = util.moment.tz(day.times[day.times.length-1].time, place.timezone).locale(currentCulture.lang);
-            - var todayHolidays = holidays.filter(function(holiday){ return moment(holiday.date).tz(place.timezone).format('DD-MM-YYYY')===dayDate.format('DD-MM-YYYY');});
+            - var todayHolidays = holidays.filter(function(holiday){ return util.moment(holiday.date).tz(place.timezone).format('DD-MM-YYYY')===dayDate.format('DD-MM-YYYY');});
             //- day header
             div(style='padding:6px 12px;background:#2199e8;color:#fff;font-size:120%;')= dayDate.format('dddd')
               | , 
@@ -41,7 +41,7 @@ div(style='background:#f2f0ea;font-family:open sans,helvetica neue,helvetica,ari
                   //- temperature
                   td(style='padding:6px 12px;padding-rigth:20px;width:70px;text-align:right;border-bottom:1px solid #e8e5da;font-size:150%;')
                     span(style='color:#2199e8;')= item.t.value
-                    span(style='color:#e8e5da')
+                    span(style='color:#333')
                       |  &deg;C
                   //- symbol name
                   td(style='padding:6px 12px;border-bottom:1px solid #e8e5da;')= symbol_name

@@ -3,6 +3,12 @@
 - var host=countryLinks.weather.host;
 
 div(style='background:#f2f0ea;font-family:open sans,helvetica neue,helvetica,arial,sans-serif;font-size:14px;color:#333;line-height:1.42857143;')
+  div
+    div(style='width:20%;height:6px;background:#e46f61;display:inline-block;')
+    div(style='width:20%;height:6px;background:#c84697;display:inline-block;')
+    div(style='width:20%;height:6px;background:#95b464;display:inline-block;')
+    div(style='width:20%;height:6px;background:#2e9b97;display:inline-block;')
+    div(style='width:20%;height:6px;background:#db7723;display:inline-block;')
   div(style='margin:0px auto;max-width:600px;')
     div(style='padding:30px 40px;')
       a(title=projectName, href='http://'+host + countryLinks.weather.home({ul:currentCulture.lang, utm_source:'newsletter', utm_medium:'email', utm_campaign:'email_weather', utm_content:'logo'}))

@@ -1,12 +1,13 @@
 {
   "name": "ournet.weather.newsletter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Ournet weather newsletter app",
   "main": "./lib/app.js",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
-    "start": "node ./lib/app.js"
+    "start": "node ./lib/app.js",
+    "bounces": "node ./lib/bounces.js"
   },
   "engines": {
     "node": ">=4.0.0"
@@ -31,6 +32,7 @@
     "bluebird": "^3.4.6",
     "cocoshel-mongo-storage": "0.0.3",
     "dotenv": "^2.0.0",
+    "isemail": "^2.2.1",
     "lodash": "^4.16.6",
     "moment-timezone": "^0.5.9",
     "nodemailer": "^2.6.4",
@@ -41,6 +43,7 @@
     "ournet.logger": "^0.1.0",
     "public-holidays": "0.0.2",
     "pug": "^2.0.0-beta6",
+    "sqs-consumer": "^3.4.0",
     "transparentcache": "^1.0.0"
   }
 }

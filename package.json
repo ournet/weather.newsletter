@@ -1,6 +1,6 @@
 {
   "name": "ournet.weather-newsletter",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Ournet weather newsletter app",
   "main": "./lib/app.js",
   "private": true,

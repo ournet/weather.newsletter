@@ -10,11 +10,11 @@ div(style='background:#f2f0ea;font-family:open sans,helvetica neue,helvetica,ari
     div(style='width:20%;height:6px;background:#2e9b97;display:inline-block;')
     div(style='width:20%;height:6px;background:#db7723;display:inline-block;')
   div(style='margin:0px auto;max-width:600px;')
-    div(style='padding:30px 40px;')
+    div(style='padding:30px 20px')
       a(title=projectName, href='http://'+host + countryLinks.weather.home({ul:currentCulture.lang, utm_source:'newsletter', utm_medium:'email', utm_campaign:'email_weather', utm_content:'logo'}))
         img(src=links.cdn.assets.img.logo(currentCulture.country), alt=projectName)
     //- content
-    div(style='background:#f2f0ea;padding:20px 40px;padding-top:0px;')
+    div(style='background:#f2f0ea;padding:20px;padding-top:0px;')
       //- message
       div()
         p(style='font-size:160%')
@@ -39,7 +39,7 @@ div(style='background:#f2f0ea;font-family:open sans,helvetica neue,helvetica,ari
                   //- time
                   td(style='padding:6px 12px;font-size:130%;width:80px;border-bottom:1px solid #e8e5da;')= date.format('HH:00')
                   //- icon
-                  td(style='padding:1px 12px;width:60px;border-bottom:1px solid #e8e5da;')
+                  td(style='padding:1px 12px;width:40px;border-bottom:1px solid #e8e5da;')
                     img(style='display:inline;width:40px;heigth:40px;', src='https://assets.ournetcdn.net/root/img/icons/weather/48/'+util.weatherIconId(item.symbol)+'.png')
                   //- temperature
                   td(style='padding:6px 12px;padding-rigth:20px;width:70px;text-align:right;border-bottom:1px solid #e8e5da;font-size:150%;')

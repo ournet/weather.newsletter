@@ -1,5 +1,5 @@
 {
-  "name": "ournet.weather.newsletter",
+  "name": "ournet.weather-newsletter",
   "version": "0.0.2",
   "description": "Ournet weather newsletter app",
   "main": "./lib/app.js",
@@ -7,7 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
     "start": "node ./lib/app.js",
-    "bounces": "node ./lib/bounces.js"
+    "bounces": "node ./lib/bounces.js",
+    "send-test": "node ./lib/send_test_email.js"
   },
   "engines": {
     "node": ">=4.0.0"

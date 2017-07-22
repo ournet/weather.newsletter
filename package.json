@@ -40,9 +40,9 @@
     "nodemailer-ses-transport": "^1.5.0",
     "ournet.data.places": "^0.4.1",
     "ournet.data.weather": "^0.6.18",
-    "ournet.links": "^0.1.0",
+    "ournet.links": "^0.2.5",
     "ournet.logger": "^0.1.0",
-    "public-holidays": "0.0.2",
+    "public-holidays": "^0.1.1",
     "pug": "^2.0.0-beta6",
     "sqs-consumer": "^3.4.0",
     "transparentcache": "^1.0.0"

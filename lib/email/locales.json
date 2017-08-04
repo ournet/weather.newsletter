@@ -1,30 +1,37 @@
 {
   "email_title_weekend": {
     "ro": "%s: Vremea în weekend",
-    "ru": "%s: Прогноз погоды на выходные дни"
+    "ru": "%s: Прогноз погоды на выходные дни",
+    "sq": "Moti në fundjavë - %s"
   },
   "email_title_weekstart": {
     "ro": "%s: Vremea pentru început de săptămână",
-    "ru": "%s: Погода в начале недели"
+    "ru": "%s: Погода в начале недели",
+    "sq": "%s: Moti për javën e parëMoti për javën e parë"
   },
   "email_title": {
     "ro": "%s: Vremea pentru următoarele zile",
-    "ru": "%s: Прогноз погоды на ближайшие дни"
+    "ru": "%s: Прогноз погоды на ближайшие дни",
+    "sq": "%s: Moti për disa ditëve të ardhshme"
   },
   "place_weather_title": {
     "ro": "Vremea în %s",
-    "ru": "%s: Погода"
+    "ru": "%s: Погода",
+    "sq": "Moti në %s"
   },
   "unsubscribe_here": {
     "ro": "Pentru a nu mai primi acest email, vă puteți <a href=\"%s\">dezabona</a>.",
-    "ru": "Чтобы прекратить получать этот бюллетень, пожалуйста, <a href=\"%s\">отказаться от подписки</a>."
+    "ru": "Чтобы прекратить получать этот бюллетень, пожалуйста, <a href=\"%s\">отказаться от подписки</a>.",
+    "sq": "Për të ndaluar marrjen e kësaj email-i, mund të <a href=\"%s\">çabonoheni</a>."
   },
   "email_sent_to": {
     "ro": "Acest email a fost trimis pentru %s",
-    "ru": "Это сообщение было отправлено на %s"
+    "ru": "Это сообщение было отправлено на %s",
+    "sq": "Ky email është dërguar te %s"
   },
   "weather_for_10_days": {
     "ro": "Vremea pentru 10 zile",
-    "ru": "Прогноз погоды на 10 дней"
+    "ru": "Прогноз погоды на 10 дней",
+    "sq": "Moti për 10 ditë"
   }
 }

@@ -52,14 +52,11 @@ div(style='background:#f2f0ea;font-family:open sans,helvetica neue,helvetica,ari
                   //-   //- i.wi.wi-wind(class='wi-towards-' + item.wind.dir.code.toLowerCase())
                   //-   span.wind-speed(class='beaufort-'+item.wind.speed.beaufort)= item.wind.speed.mps
                   //-   = S('item_wind_speed_ms')
-            div(style='padding:3px;border-top:2px solid #e8e5da;')
-            |  
-            if (todayHolidays && todayHolidays.length>0)
-              div(style='font-size:90%;')
-                each item in todayHolidays
-                  div= item.summary
-              div(style='padding:3px;border-top:2px solid #e8e5da;')
-              |  
+            div(style='padding-bottom:6px;border-top:2px solid #e8e5da;')
+              if (todayHolidays && todayHolidays.length>0)
+                div(style='font-size:90%;background-color:#e8e5da;padding:3px 10px')
+                  each item in todayHolidays
+                    div= item.summary
       br
       a(style='color:#cb6048;',href='http://'+host+countryLinks.weather.place(place.id, {ul:currentCulture.lang, utm_source:'newsletter', utm_medium:'email', utm_campaign:'email_weather', utm_content:'10days'}))= S('weather_for_10_days', currentCulture.lang)
         |  ›
